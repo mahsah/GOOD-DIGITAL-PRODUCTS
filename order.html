@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOOD DIGITAL PRODUCTS - order</title>
+    <link rel="shortcut icon" href="images/png/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="libraries/bootstrap.min.css">
+    <script src="libraries/jquery.min.js"></script>
+    <script src="libraries/bootstrap.min.js"></script>
+    <script src="libraries/fontawesome.min.js"></script>
+    <link rel="stylesheet" href="css/order-style.css" type="text/css">
+</head>
+
+<body class="payment-page">
+    <header class="payment-header p-3">
+        <a href="index.html" class="get-back-div">
+            <i class="fa fa-arrow-circle-left"></i> get back to the shop
+        </a>
+        <a href="index.html">
+            <img src="images/png/logo.png" alt="">
+        </a>
+    </header>
+    <div class="payment-main">
+        <div class="information">
+            <div class="information-header">
+                please complete this form to finalise your order
+            </div>
+            <form id="form">
+                <div>
+                    <label for="full-name">fullname :
+                        <input type="text" id="full-name" placeholder="example : travis marston">
+                        <div id="full-name-alert"></div>
+                        </label>
+                </div>
+                <div>
+                    <label for="mobilephone-number">mobilephone number :
+                        <input type="number" id="mobilephone-number" placeholder="example : 001 012 3456 789" onkeydown="javascript: return event.keyCode == 69 ? false : true" >
+                        <div id="mobilephone-number-alert"></div>
+                        </label>
+                </div>
+                <div>
+                    <label for="telephone-number">telephone number :
+                        <input type="number" id="telephone-number" placeholder="example : 001 555 3456 789" onkeydown="javascript: return event.keyCode == 69 ? false : true" >
+                        <div id="telephone-number-alert"></div>
+                    </label>
+                </div>
+                <div>
+                    <label for="postal-code">postal code : (must have 5 digits)
+                        <input type="number" id="postal-code" placeholder="example : 12345" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+                        <div id="postal-code-alert"></div>
+                        </label>
+                </div>
+            </form>
+            <div class="address-div">
+                <label for="full-address">fulladdress :
+                    <textarea rows="3" form="form" id="full-address" placeholder="example : No1234 , Figuearoa street , Losangles , California , USA"></textarea>
+                    <div id="full-address-alert"></div>
+                    </label>
+            </div>
+            <div class="notes-div">
+                <label for="notes">notes :
+                        <textarea rows="3" id="notes" form="form" placeholder="any notes about your order...example : send my order between 10 and 12 oclock"></textarea>
+                        <div id="notes-alert"></div>
+                    </label>
+            </div>
+
+            <div>
+
+                <div class="radio-button">
+                    <label for="pay-in-place">
+                            pay in place
+                            <input type="radio" id="pay-in-place" name="pay-method">
+                        </label>
+                    <label for="pay-now">
+                            pay now
+                            <input type="radio" id="pay-now" name="pay-method">
+                        </label>
+                    <label for="pay-in-instalment">
+                            pay in instalment
+                            <input type="radio" id="pay-in-instalment" name="pay-method">
+                        </label>
+
+                </div>
+                <div class="instalment-inputs"></div>
+                <span class="price-section"></span>
+                <div class="information-totalprice"></div>
+                <div class="final-buttons">
+                    <button class="show-price">show the final price</button>
+                    <div id="final-buttons">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="factor"></div>
+        <div class="loader-div">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(158, 182, 255); display: block; shape-rendering: auto;" width="15%" height="15%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                <path fill="none" stroke="#ffcc00" stroke-width="8" stroke-dasharray="220.66647827148438 35.92244995117187" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round" style="transform:scale(0.8);transform-origin:50px 50px">
+                  <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="1s" keyTimes="0;1" values="0;256.58892822265625"></animate>
+                </path>
+            </svg>
+        </div>
+    </div>
+</body>
+<script src="javascript/order-script.js"></script>
+
+</html>
